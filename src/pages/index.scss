@@ -1,0 +1,59 @@
+@import "../components/_variables.scss";
+
+$icon-color: $primary;
+$container-color: $secondary;
+
+.main-jumbotron {
+  text-align: center;
+}
+
+.features-section {
+  text-align: center;
+  h2 {
+    margin-bottom: 1em;
+  }
+  h3 {
+    font-size: 1.3em;
+  }
+  .icon {
+    max-height: 4em;
+    color: $icon-color;
+  }
+}
+
+.components {
+  background-color: $container-color;
+  margin-top: 1em;
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-top: 2.5em;
+  .component {
+    margin-bottom: 2em;
+  }
+  .release-info {
+    padding-left: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border-left: 4px solid #bbb;
+    p {
+      margin-bottom: 0.25em;
+    }
+    .btn {
+      margin-right: 0.5em;
+    }
+  }
+}
+
+.next-steps {
+  text-align: center;
+  margin-top: 1em;
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
+
+  a {
+    margin-right: 2rem;
+  }
+}
+

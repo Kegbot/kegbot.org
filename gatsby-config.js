@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Basic Bootstrap Starter`,
-    description: `A simple Gatsby starter leveraging react-bootstrap and little else.`,
-    author: `@mik3y`,
+    title: `Kegbot Project`,
+    description: `An internet-connected beer kegerator and beverage tracking system`,
+    author: `@Kegbot`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
