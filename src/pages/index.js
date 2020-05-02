@@ -11,10 +11,10 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Kegbot Project: Track beer keg volume and pours" />
     <Jumbotron className="main-jumbotron">
-      <h1>Kegbot: The Smart Beer Keg Tracker</h1>
+      <h1>Kegbot: The Smart Beer Keg Monitor</h1>
       <p>
         Kegbot is a <b>free, open-source</b> software and hardware system to
-        build an intelligent beer or beverage keg monitor.
+        build an intelligent beer or beverage keg tracker.
       </p>
     </Jumbotron>
     <Container>

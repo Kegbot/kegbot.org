@@ -1,10 +1,16 @@
 @import "../components/_variables.scss";
 
+@import "~@openfonts/roboto_latin/index.css";
+@import "~@openfonts/source-sans-pro_latin/index.css";
+
 $icon-color: $primary;
 $container-color: $secondary;
 
 .main-jumbotron {
   text-align: center;
+  h1 {
+    font-family: 'Roboto';
+  }
 }
 
 .features-section {

@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "author": "mike wakerly <opensource@hoho.com>",
   "dependencies": {
+    "@openfonts/roboto_latin": "^1.44.1",
+    "@openfonts/source-sans-pro_latin": "^1.44.1",
     "@styled-icons/fa-brands": "^10.0.0",
     "@styled-icons/feather": "^10.0.0",
     "@styled-icons/typicons": "^10.0.0",
