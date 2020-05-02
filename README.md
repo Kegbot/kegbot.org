@@ -15,3 +15,10 @@ Run the dev server:
 ```
 $ gatsby develop
 ```
+
+## Deploying the site
+
+A project admin can deploy to the `gh-pages` branch for GitHub pages using this command:
+```
+$ yarn deploy
+```
