@@ -5,6 +5,7 @@ import { Col, Container, Jumbotron, Row } from "react-bootstrap";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import "./index.scss";
+import { Android, RaspberryPi } from "@styled-icons/fa-brands";
 
 const IndexPage = () => (
   <Layout>
@@ -47,6 +48,25 @@ const IndexPage = () => (
               Kegbot is a community-built, community supported project. Want to
               integrate Kegbot with something else or add a new feature? The
               code is free for you to use and extend.
+            </p>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={{ span: 4, offset: 2 }}>
+            <Android className="icon" />
+            <h3>Android Tablet App</h3>
+            <p>
+              Use the free Android tablet app to show keg status and
+              statistics, right at your taps. It can also take pictures
+              as you pour.
+            </p>
+          </Col>
+          <Col md={4}>
+            <RaspberryPi className="icon" />
+            <h3>Raspberry Pi Friendly</h3>
+            <p>
+              Kegbot works great with Raspberry Pi. You can use your Pi as a
+              controller, or just run the server part alone.
             </p>
           </Col>
         </Row>
