@@ -9,7 +9,7 @@ import { Android, RaspberryPi } from "@styled-icons/fa-brands";
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Kegbot Project: Track beer keg volume and pours" />
     <Jumbotron className="main-jumbotron">
       <h1>Kegbot: The Smart Beer Keg Tracker</h1>
       <p>
