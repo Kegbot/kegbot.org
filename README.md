@@ -18,7 +18,10 @@ $ gatsby develop
 
 ## Deploying the site
 
-A project admin can deploy to the `gh-pages` branch for GitHub pages using this command:
+Merges to `master` from a PR will be automatically push to the static
+pages repo, at https://github.com/Kegbot/kegbot.github.io
+
+A project admin can deploy to the `gh-pages` branch manually, using this command:
 ```
 $ yarn deploy
 ```
