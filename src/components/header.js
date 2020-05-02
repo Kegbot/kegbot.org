@@ -3,10 +3,12 @@ import PropTypes from "prop-types";
 import React from "react";
 import { Button, Navbar, Nav, NavItem } from "react-bootstrap";
 
+import logoPng from "../images/kegbot-logo-full-white.png";
+
 const Header = ({ siteTitle }) => (
   <Navbar bg="dark" variant="dark" expand="sm">
     <Navbar.Brand as={Link} href="/">
-      {siteTitle}
+      <img src={logoPng} className="img-responsive" style={{ height: '32px' }} alt={siteTitle} />
     </Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">

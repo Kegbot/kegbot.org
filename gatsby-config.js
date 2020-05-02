@@ -18,13 +18,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-basic-bootstrap`,
-        short_name: `starter`,
+        name: `Kegbot Project`,
+        short_name: `Kegbot`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/kegbot-org-icon-72x72.png`,
       },
     },
     {
