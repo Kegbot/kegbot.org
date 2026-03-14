@@ -1,27 +1,98 @@
-# kegbot.org site
+# kegbot-org
 
-This is the static content site generator behing `kegbot.org`. It's powered by
-[GatsbyJS](https://www.gatsbyjs.org/).
+Website for the [Kegbot Project](https://kegbot.org) — a free, open-source software and hardware system for intelligent beer keg tracking.
 
-## 🚀 Developer Setup
+Built with React, Material UI, and Vite. Deployable to Cloudflare Pages.
 
-Perform the following one-time setup:
-```
-$ npm install -g gatsby
-$ yarn
-```
+## Getting started
 
-Run the dev server:
-```
-$ gatsby develop
+Install dependencies:
+
+```bash
+bun install
 ```
 
-## Deploying the site
+Start a development server:
 
-Merges to `master` from a PR will be automatically push to the static
-pages repo, at https://github.com/Kegbot/kegbot.github.io
-
-A project admin can deploy to the `gh-pages` branch manually, using this command:
+```bash
+bun dev
 ```
-$ yarn deploy
+
+Build for production:
+
+```bash
+bun run build
+```
+
+Preview the production build locally:
+
+```bash
+bun run preview
+```
+
+Deploy to Cloudflare Pages:
+
+```bash
+bun run deploy
+```
+
+## Development
+
+### Linting and formatting
+
+This project uses [Biome](https://biomejs.dev) for linting, formatting, and import organization.
+
+To check for issues:
+
+```bash
+bunx @biomejs/biome check .
+```
+
+To auto-fix issues:
+
+```bash
+bun run lint
+```
+
+### Pre-commit hooks
+
+[pre-commit](https://pre-commit.com) is used to run Biome checks automatically before each commit. Install the hooks after cloning:
+
+```bash
+pre-commit install
+```
+
+## Stack
+
+- **[React](https://react.dev)** — UI library
+- **[React Router](https://reactrouter.com)** — client-side routing
+- **[Material UI](https://mui.com)** — component library and theming
+- **[Vite](https://vite.dev)** — build tool and dev server
+- **[Cloudflare Pages](https://pages.cloudflare.com)** — hosting and deployment via `wrangler`
+- **[Biome](https://biomejs.dev)** — linting, formatting, and import organization
+- **[Bun](https://bun.sh)** — package manager and script runner
+
+## Pages
+
+| Route | Description |
+|---|---|
+| `/` | Homepage — hero, features, components, CTA |
+| `/about` | About the project |
+| `/getting-started` | Getting started guide (coming soon) |
+| `*` | 404 page |
+
+## Deployment
+
+The site deploys as a static SPA to Cloudflare Pages. A `public/_redirects` file ensures all routes fall back to `index.html` for client-side routing.
+
+To deploy, authenticate with Cloudflare first:
+
+```bash
+bunx wrangler login
+```
+
+Then run:
+
+```bash
+bun run deploy
 ```

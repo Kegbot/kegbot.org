@@ -1,60 +1,31 @@
 {
-  "name": "gatsby-starter-basic-bootstrap",
-  "private": false,
-  "description": "A very basic gatsby starter with react-bootstrap",
-  "version": "0.1.0",
-  "author": "mike wakerly <opensource@hoho.com>",
+  "name": "kegbot-org",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "lint": "bunx @biomejs/biome check --apply .",
+    "deploy": "bunx wrangler pages deploy dist"
+  },
   "dependencies": {
-    "@openfonts/roboto_latin": "^1.44.1",
-    "@openfonts/source-sans-pro_latin": "^1.44.1",
-    "@styled-icons/fa-brands": "^10.0.0",
-    "@styled-icons/feather": "^10.0.0",
-    "@styled-icons/typicons": "^10.0.0",
-    "bootstrap": "^4.4.1",
-    "bootswatch": "^4.4.1",
-    "gatsby": "^2.20.12",
-    "gatsby-image": "^2.3.1",
-    "gatsby-plugin-google-analytics": "^2.3.0",
-    "gatsby-plugin-manifest": "^2.3.3",
-    "gatsby-plugin-offline": "^3.1.2",
-    "gatsby-plugin-react-helmet": "^3.2.1",
-    "gatsby-plugin-sass": "^2.2.1",
-    "gatsby-plugin-sharp": "^2.5.3",
-    "gatsby-source-filesystem": "^2.2.2",
-    "gatsby-transformer-sharp": "^2.4.3",
-    "node-sass": "^4.13.1",
-    "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-bootstrap": "^1.0.0",
-    "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1",
-    "styled-components": "^5.1.0"
+    "@emotion/react": "^11.13.5",
+    "@emotion/styled": "^11.13.5",
+    "@mui/icons-material": "^6.4.7",
+    "@mui/material": "^6.4.7",
+    "react": "^19",
+    "react-dom": "^19",
+    "react-router-dom": "^7.2.0"
   },
   "devDependencies": {
-    "gh-pages": "^2.2.0",
-    "prettier": "^1.19.1"
-  },
-  "keywords": [
-    "gatsby",
-    "bootstrap",
-    "react-bootstrap"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mik3y/gatsby-starter-basic-bootstrap"
-  },
-  "bugs": {
-    "url": "https://github.com/mik3y/gatsby-starter-basic-bootstrap/issues"
+    "@biomejs/biome": "2.4.4",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "^5.7.3",
+    "vite": "^6.2.0",
+    "wrangler": "^3.109.4"
   }
 }
