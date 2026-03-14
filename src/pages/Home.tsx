@@ -201,7 +201,7 @@ export default function Home() {
           />
           <Grid container spacing={3}>
             {features.map((f) => (
-              <Grid item xs={12} sm={6} md={4} key={f.title}>
+              <Grid size={{ xs: 12, sm: 6, md: 4 }} key={f.title}>
                 <Card
                   elevation={0}
                   sx={{
