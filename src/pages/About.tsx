@@ -30,7 +30,13 @@ const sections = [
 export default function About() {
   return (
     <Container maxWidth="md" sx={{ py: { xs: 6, md: 10 } }}>
-      <Typography variant="h3" component="h1" fontWeight={700} gutterBottom>
+      <Typography
+        variant="h3"
+        component="h1"
+        fontWeight={700}
+        gutterBottom
+        sx={{ color: "primary.main" }}
+      >
         About Kegbot
       </Typography>
       <Divider
@@ -44,7 +50,12 @@ export default function About() {
       <Stack spacing={5}>
         {sections.map((s) => (
           <Box key={s.title}>
-            <Typography variant="h5" fontWeight={600} gutterBottom>
+            <Typography
+              variant="h5"
+              fontWeight={600}
+              gutterBottom
+              sx={{ color: "secondary.main" }}
+            >
               {s.title}
             </Typography>
             <Typography color="text.secondary" lineHeight={1.8}>

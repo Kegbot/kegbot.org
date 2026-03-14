@@ -8,7 +8,13 @@ export default function GettingStarted() {
       sx={{ py: { xs: 6, md: 10 }, textAlign: "center" }}
     >
       <ConstructionIcon sx={{ fontSize: 80, color: "primary.main", mb: 2 }} />
-      <Typography variant="h3" component="h1" fontWeight={700} gutterBottom>
+      <Typography
+        variant="h3"
+        component="h1"
+        fontWeight={700}
+        gutterBottom
+        sx={{ color: "primary.main" }}
+      >
         Build a Kegbot
       </Typography>
       <Divider

@@ -49,7 +49,10 @@ export default function Header() {
   };
 
   return (
-    <AppBar position="sticky" color="primary">
+    <AppBar
+      position="sticky"
+      sx={{ bgcolor: "#0D1117", borderBottom: 1, borderColor: "divider" }}
+    >
       <Toolbar>
         <Box
           component={Link}
@@ -74,7 +77,9 @@ export default function Header() {
               open={drawerOpen}
               onClose={() => setDrawerOpen(false)}
             >
-              <Box sx={{ width: 240 }}>
+              <Box
+                sx={{ width: 240, bgcolor: "background.paper", height: "100%" }}
+              >
                 <List>
                   {navLinks.map((link) => (
                     <ListItem key={link.label} disablePadding>

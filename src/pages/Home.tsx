@@ -100,25 +100,48 @@ export default function Home() {
       {/* Hero */}
       <Box
         sx={{
-          bgcolor: "primary.main",
-          color: "white",
-          py: { xs: 8, md: 12 },
+          background:
+            "linear-gradient(160deg, #0D1117 0%, #161B22 50%, #1A1F2B 100%)",
+          color: "text.primary",
+          py: { xs: 8, md: 14 },
           textAlign: "center",
+          borderBottom: 1,
+          borderColor: "divider",
+          position: "relative",
+          overflow: "hidden",
+          "&::before": {
+            content: '""',
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background:
+              "radial-gradient(ellipse at 50% 0%, rgba(0,229,255,0.08) 0%, transparent 60%)",
+            pointerEvents: "none",
+          },
         }}
       >
-        <Container maxWidth="md">
+        <Container maxWidth="md" sx={{ position: "relative" }}>
           <Typography
             variant="h2"
             component="h1"
-            fontWeight={700}
+            fontWeight={800}
             gutterBottom
-            sx={{ fontSize: { xs: "2rem", md: "3rem" } }}
+            sx={{
+              fontFamily: "'Sora', sans-serif",
+              fontSize: { xs: "2rem", md: "3rem" },
+              background: "linear-gradient(135deg, #00E5FF, #FF6EC7)",
+              backgroundClip: "text",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
           >
-            Kegbot: The Smart Beer Keg Monitor
+            Kegbot: The Pour-Tracking Kegerator
           </Typography>
           <Typography
             variant="h6"
-            sx={{ opacity: 0.9, mb: 4, fontWeight: 300 }}
+            sx={{ color: "text.secondary", mb: 4, fontWeight: 300 }}
           >
             A free, open-source software and hardware system to build an
             intelligent beer or beverage keg tracker.
@@ -131,8 +154,6 @@ export default function Home() {
             <Button
               variant="contained"
               size="large"
-              color="inherit"
-              sx={{ color: "primary.main", bgcolor: "white" }}
               onClick={() => navigate("/getting-started")}
             >
               Getting Started Guide
@@ -140,7 +161,6 @@ export default function Home() {
             <Button
               variant="outlined"
               size="large"
-              color="inherit"
               href="https://forum.kegbot.org"
               target="_blank"
               rel="noopener noreferrer"
@@ -148,6 +168,12 @@ export default function Home() {
               Join Community Forum
             </Button>
           </Stack>
+          <Typography
+            variant="body2"
+            sx={{ mt: 3, color: "text.secondary", fontStyle: "italic" }}
+          >
+            Open source &amp; over-engineered since <strong>2003</strong>.
+          </Typography>
         </Container>
       </Box>
 
@@ -160,6 +186,7 @@ export default function Home() {
             textAlign="center"
             fontWeight={700}
             gutterBottom
+            sx={{ color: "primary.main" }}
           >
             Features
           </Typography>
@@ -172,7 +199,7 @@ export default function Home() {
               borderColor: "primary.main",
             }}
           />
-          <Grid container spacing={4}>
+          <Grid container spacing={3}>
             {features.map((f) => (
               <Grid item xs={12} sm={6} md={4} key={f.title}>
                 <Card
@@ -181,10 +208,12 @@ export default function Home() {
                     height: "100%",
                     textAlign: "center",
                     p: 2,
-                    border: 1,
-                    borderColor: "divider",
-                    "&:hover": { borderColor: "primary.main", boxShadow: 2 },
-                    transition: "all 0.2s",
+                    bgcolor: "background.paper",
+                    "&:hover": {
+                      borderColor: "primary.main",
+                      boxShadow: "0 0 20px rgba(0,229,255,0.1)",
+                    },
+                    transition: "all 0.3s ease",
                   }}
                 >
                   <CardContent>
@@ -206,7 +235,7 @@ export default function Home() {
       {/* Components */}
       <Box
         id="components"
-        sx={{ py: { xs: 6, md: 10 }, bgcolor: "background.paper" }}
+        sx={{ py: { xs: 6, md: 10 }, bgcolor: "rgba(22, 27, 34, 0.5)" }}
       >
         <Container maxWidth="lg">
           <Typography
@@ -215,6 +244,7 @@ export default function Home() {
             textAlign="center"
             fontWeight={700}
             gutterBottom
+            sx={{ color: "secondary.main" }}
           >
             Components
           </Typography>
@@ -224,7 +254,7 @@ export default function Home() {
               width: 60,
               mx: "auto",
               borderBottomWidth: 3,
-              borderColor: "primary.main",
+              borderColor: "secondary.main",
             }}
           />
           <Stack spacing={4}>
@@ -275,9 +305,21 @@ export default function Home() {
       </Box>
 
       {/* CTA */}
-      <Box sx={{ py: { xs: 6, md: 10 }, textAlign: "center" }}>
+      <Box
+        sx={{
+          py: { xs: 6, md: 10 },
+          textAlign: "center",
+          borderTop: 1,
+          borderColor: "divider",
+        }}
+      >
         <Container maxWidth="sm">
-          <Typography variant="h4" fontWeight={700} gutterBottom>
+          <Typography
+            variant="h4"
+            fontWeight={700}
+            gutterBottom
+            sx={{ color: "primary.main" }}
+          >
             Ready to build your Kegbot?
           </Typography>
           <Typography color="text.secondary" mb={4}>

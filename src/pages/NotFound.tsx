@@ -11,12 +11,22 @@ export default function NotFound() {
       <Typography
         variant="h1"
         fontWeight={700}
-        color="primary"
-        sx={{ fontSize: { xs: "4rem", md: "7rem" } }}
+        sx={{
+          fontSize: { xs: "4rem", md: "7rem" },
+          background: "linear-gradient(135deg, #00E5FF, #FF6EC7)",
+          backgroundClip: "text",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+        }}
       >
         404
       </Typography>
-      <Typography variant="h4" fontWeight={600} gutterBottom>
+      <Typography
+        variant="h4"
+        fontWeight={600}
+        gutterBottom
+        sx={{ color: "text.primary" }}
+      >
         NOT FOUND
       </Typography>
       <Typography color="text.secondary" mb={4}>
