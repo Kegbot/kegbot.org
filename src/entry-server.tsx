@@ -6,18 +6,26 @@ import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router";
 
 import App from "./App";
+import { TitleContext } from "./components/Page";
 
 export function render(url: string) {
   const cache = createCache({ key: "css" });
   const { extractCriticalToChunks, constructStyleTagsFromChunks } =
     createEmotionServer(cache);
 
+  let title = "Kegbot";
+  const setTitle = (t: string) => {
+    title = t;
+  };
+
   const html = renderToString(
     <React.StrictMode>
       <CacheProvider value={cache}>
-        <StaticRouter location={url}>
-          <App />
-        </StaticRouter>
+        <TitleContext.Provider value={setTitle}>
+          <StaticRouter location={url}>
+            <App />
+          </StaticRouter>
+        </TitleContext.Provider>
       </CacheProvider>
     </React.StrictMode>,
   );
@@ -25,5 +33,5 @@ export function render(url: string) {
   const chunks = extractCriticalToChunks(html);
   const styles = constructStyleTagsFromChunks(chunks);
 
-  return { html, styles };
+  return { html, styles, title };
 }

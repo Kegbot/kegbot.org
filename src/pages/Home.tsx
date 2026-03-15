@@ -18,6 +18,8 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router";
 
+import Page from "@/components/Page";
+
 const features = [
   {
     icon: <MonitorHeartIcon sx={{ fontSize: 48 }} color="primary" />,
@@ -96,7 +98,7 @@ export default function Home() {
   const navigate = useNavigate();
 
   return (
-    <>
+    <Page title="Open Source Beer Kegerator System">
       {/* Hero */}
       <Box
         sx={{
@@ -350,6 +352,6 @@ export default function Home() {
           </Stack>
         </Container>
       </Box>
-    </>
+    </Page>
   );
 }

@@ -14,6 +14,8 @@ import {
   Typography,
 } from "@mui/material";
 
+import Page from "@/components/Page";
+
 /* ── Timeline data ──────────────────────────────────────────────── */
 
 interface TimelineEvent {
@@ -456,77 +458,79 @@ function kegbotAge() {
 
 export default function About() {
   return (
-    <Container maxWidth="md" sx={{ py: { xs: 6, md: 10 } }}>
-      <Typography
-        variant="h3"
-        component="h1"
-        fontWeight={700}
-        gutterBottom
-        sx={{ color: "primary.main" }}
-      >
-        About Kegbot
-      </Typography>
-      <Divider
-        sx={{
-          mb: 6,
-          width: 60,
-          borderBottomWidth: 3,
-          borderColor: "primary.main",
-        }}
-      />
-      <Stack spacing={5}>
-        {sections.map((s) => (
-          <Box key={s.title}>
-            <Typography
-              variant="h5"
-              fontWeight={600}
-              gutterBottom
-              sx={{ color: "secondary.main" }}
-            >
-              {s.title}
-            </Typography>
-            <Typography color="text.secondary" lineHeight={1.8}>
-              {s.body}
-            </Typography>
-          </Box>
-        ))}
-      </Stack>
-
-      {/* History / Timeline */}
-      <Typography
-        variant="h3"
-        component="h2"
-        fontWeight={700}
-        sx={{ color: "primary.main", mt: { xs: 10, md: 14 } }}
-        gutterBottom
-      >
-        History
-      </Typography>
-      <Divider
-        sx={{
-          mb: 3,
-          width: 60,
-          borderBottomWidth: 3,
-          borderColor: "primary.main",
-        }}
-      />
-      <Typography color="text.secondary" lineHeight={1.8} sx={{ mb: 4 }}>
-        Kegbot is{" "}
-        <Box
-          component="span"
-          sx={{
-            fontWeight: 900,
-            textDecoration: "underline dashed",
-            textDecorationColor: "primary.main",
-            textUnderlineOffset: 4,
-          }}
+    <Page title="About">
+      <Container maxWidth="md" sx={{ py: { xs: 6, md: 10 } }}>
+        <Typography
+          variant="h3"
+          component="h1"
+          fontWeight={700}
+          gutterBottom
+          sx={{ color: "primary.main" }}
         >
-          {kegbotAge()} years old
-        </Box>
-        , which is old enough to drink everywhere we know of. At least one
-        Kegbot (and often many more) have been operational since then.
-      </Typography>
-      <HistoryTimeline events={timelineEvents} />
-    </Container>
+          About Kegbot
+        </Typography>
+        <Divider
+          sx={{
+            mb: 6,
+            width: 60,
+            borderBottomWidth: 3,
+            borderColor: "primary.main",
+          }}
+        />
+        <Stack spacing={5}>
+          {sections.map((s) => (
+            <Box key={s.title}>
+              <Typography
+                variant="h5"
+                fontWeight={600}
+                gutterBottom
+                sx={{ color: "secondary.main" }}
+              >
+                {s.title}
+              </Typography>
+              <Typography color="text.secondary" lineHeight={1.8}>
+                {s.body}
+              </Typography>
+            </Box>
+          ))}
+        </Stack>
+
+        {/* History / Timeline */}
+        <Typography
+          variant="h3"
+          component="h2"
+          fontWeight={700}
+          sx={{ color: "primary.main", mt: { xs: 10, md: 14 } }}
+          gutterBottom
+        >
+          History
+        </Typography>
+        <Divider
+          sx={{
+            mb: 3,
+            width: 60,
+            borderBottomWidth: 3,
+            borderColor: "primary.main",
+          }}
+        />
+        <Typography color="text.secondary" lineHeight={1.8} sx={{ mb: 4 }}>
+          Kegbot is{" "}
+          <Box
+            component="span"
+            sx={{
+              fontWeight: 900,
+              textDecoration: "underline dashed",
+              textDecorationColor: "primary.main",
+              textUnderlineOffset: 4,
+            }}
+          >
+            {kegbotAge()} years old
+          </Box>
+          , which is old enough to drink everywhere we know of. At least one
+          Kegbot (and often many more) have been operational since then.
+        </Typography>
+        <HistoryTimeline events={timelineEvents} />
+      </Container>
+    </Page>
   );
 }
