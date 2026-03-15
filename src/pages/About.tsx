@@ -215,7 +215,7 @@ const timelineEvents: TimelineEvent[] = [
 /* ── Timeline component ─────────────────────────────────────────── */
 
 function HistoryTimeline({ events }: { events: TimelineEvent[] }) {
-  let lastYear: number | null = null;
+  let lastYear: number | string | null = null;
 
   return (
     <Timeline
