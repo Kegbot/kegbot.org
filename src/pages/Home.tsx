@@ -176,6 +176,23 @@ export default function Home() {
           >
             Open source &amp; over-engineered since <strong>2003</strong>.
           </Typography>
+          <Button
+            variant="outlined"
+            size="large"
+            onClick={() => navigate("/about")}
+            sx={{
+              mt: 2,
+              color: "secondary.main",
+              borderColor: "secondary.main",
+              "&:hover": {
+                borderColor: "secondary.main",
+                bgcolor: "rgba(255, 110, 199, 0.08)",
+                boxShadow: "0 0 20px rgba(255, 110, 199, 0.25)",
+              },
+            }}
+          >
+            Kegbot's History →
+          </Button>
         </Container>
       </Box>
 

@@ -171,7 +171,7 @@ const timelineEvents: TimelineEvent[] = [
     },
   },
   {
-    year: 2022,
+    year: 2014,
     title: "Kegbot v1.0.0",
     description: "We finally hit the big 1-point-0 and release v1.0.0.",
     link: {
@@ -180,7 +180,7 @@ const timelineEvents: TimelineEvent[] = [
     },
   },
   {
-    year: 2022,
+    year: 2014,
     title: "Kegbot v1.1.0",
     description: "Kegbot version 1.1.0 is released.",
     link: {
@@ -189,7 +189,7 @@ const timelineEvents: TimelineEvent[] = [
     },
   },
   {
-    year: 2022,
+    year: 2014,
     title: "Kegbot v1.2.0",
     description: "Kegbot version 1.2.0 is released.",
     link: {
